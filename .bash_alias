@@ -1,0 +1,23 @@
+#alias ls='ls --show-control-chars'
+alias ll='ls -l'
+alias la='ls -a'
+alias lal='ls -al'
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias mkdir='mkdir -p'
+
+alias his='history'
+#alias less='lv -Os'
+alias l='less'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
+
+alias open='cygstart'
+alias sc=screen
