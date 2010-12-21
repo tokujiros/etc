@@ -23,5 +23,8 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 
-alias open='cygstart'
 alias sc='screen'
+
+if [ -f /usr/bin/cygstart ] ; then
+   alias open='cygstart'
+fi
