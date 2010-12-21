@@ -1,16 +1,20 @@
-#alias ls='ls --show-control-chars'
+#alias ls='ls -hF --color=tty --show-control-chars'
 alias ll='ls -l'
-alias la='ls -a'
-alias lal='ls -al'
+alias la='ls -A'
+alias lal='ls -Al'
 
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias mkdir='mkdir -p'
 
+alias df='df -h'
+alias du='du -h'
+
 alias his='history'
 #alias less='lv -Os'
 alias l='less'
+alias grep='grep --color'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -20,4 +24,4 @@ alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 
 alias open='cygstart'
-alias sc=screen
+alias sc='screen'
