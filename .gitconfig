@@ -1,7 +1,5 @@
 [color]
-	status = auto
-	diff = auto
-	branche = auto
+	ui = auto
 
 [alias]
 	s = status
