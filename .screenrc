@@ -1,6 +1,7 @@
 escape ^Tt
 startup_message off
 defscrollback 5000
+#shell $SHELL
 
 bind 1 only
 bind 2 eval split focus other
@@ -9,3 +10,17 @@ bind o focus
 bind s eval split focus other
 
 hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+#caption always "%{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d(%D) %{=b wb}%c"
+#hardstatus ignore "%w | %h"
+
+#logfile "/tmp/XXXX.log"
+#log on
+#deflog on
+
+
+#screen -t zsh 0 zsh
+#screen -t zsh 1 zsh
+#screen -t zsh 2 zsh
+#select 2
+#select 1
+#select 0

@@ -8,13 +8,12 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias mkdir='mkdir -p'
 
-alias df='df -h'
-alias du='du -h'
-
 alias his='history'
 #alias less='lv -Os'
 alias l='less'
 alias grep='grep --color'
+alias df='df -h'
+alias du='du -h'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -28,3 +27,12 @@ alias sc='screen'
 if [ -f /usr/bin/cygstart ] ; then
    alias open='cygstart'
 fi
+
+
+alias godshome='pushd //yjds1/users/nosuzuki'
+alias godssvn='pushd //yjds1/users/nosuzuki/var/svn'
+alias godshg='pushd //yjds1/users/nosuzuki/var/svn'
+#alias googhome='pushd //yjog/Csvc-Dept/Descktop/dev1/nosuzuki'
+#alias googhome='pushd //Yahoo/fs/ORG/Rd-unit/Frontend-dept/Desktop-dev/dev1/nosuzuki'
+alias googhome='pushd //Yahoo/fs/ORG?Rd-unit/Frontend-dept/Appli-dev/dev1/nosuzuki'
+alias gofujisan='pushd //yjfs/PROJECT3/toolbar/ãZèpån/Yahoo*/Fujisan'
