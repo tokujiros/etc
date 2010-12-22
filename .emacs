@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
-;(add-to-list 'load-path "~/.emacs.d/auto-install")
+(add-to-list 'load-path "~/.emacs.d/auto-install")
 
 
 ;;
@@ -49,6 +49,48 @@
 
 
 ;;
+;; language setting
+;;
+
+(set-language-environment 'utf-8); "Japanese")
+(prefer-coding-system 'utf-8)
+(setq file-name-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+
+
+;;
+;; shell
+;;
+
+(setq shell-file-name "bash")
+(setq explicit-shell-file-name shell-file-name)
+(setenv "SHELL" shell-file-name)
+;(setq shell-command-switch "-c")
+;(modify-coding-system-alist 'process ".*sh\\.exe" '(undecided-dos . shift-jis)) ;euc-japan))
+
+(setq system-uses-terminfo nil)
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+
+;;
+;; development
+;;
+
+(setq compilation-window-height 20)
+(setq compile-command "rake")
+(add-hook 'compilation-mode-hook
+					(lambda ()
+						(set-default-coding-system 'sjis)))
+(add-hook 'ruby-mode-hook
+					(lambda ()
+						(setq tag-width 2)
+						(setq indent-tabs-mode t)
+						(setq ruby-indent-level 2)
+						(setq ruby-deep-indent-parent-style nil)))
+
+
+;;
 ;; misc settings.
 ;;
 
@@ -62,27 +104,18 @@
 (setq truncate-lines nil)
 (setq truncate-partial-width-windows nil)
 
-(menu-bar-mode nil)
+(menu-bar-mode 0)
 (if (not nw-p)
     (progn
-      (tool-bar-mode nil)))
+      (tool-bar-mode 0)))
 
 (setq-default tab-width 2)
 (set indent-line-function 'indnet-relative-maybe)
+(add-hook 'text-mode-hook
+					(lambda () (local-set-key "\t" 'self-insert-command)))
+(add-hook 'c-mode-hook
+					(lambda () (local-set-key "\t" 'self-insert-command)))
 
-(set-language-environment "Japanese")
-
-(setq compilation-window-height 20)
-(setq compile-command "rake")
-(add-hook 'compilation-mode-hook
-	  (lambda ()
-	    (set-default-coding-system 'sjis)))
-(add-hook 'ruby-mode-hook
-	  (lambda ()
-	    (setq tag-width 2)
-	    (setq indent-tabs-mode t)
-	    (setq ruby-indent-level 2)
-	    (setq ruby-deep-indent-parent-style nil)))
 
 
 ;;
@@ -96,3 +129,35 @@
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 (add-hook 'ruby-mode-hook '(lambda () (inf-ruby-keys)))
+
+
+;;
+;; auto-install
+;;
+
+(require 'auto-install)
+(setq auto-install-directory "~/.emacs.d/auto-install/")
+(auto-install-update-emacswiki-package-name t)
+(auto-install-compatibility-setup)
+
+
+;;
+;; nav
+;;
+
+;(require 'nav)
+;(global-set-key [C-tab] 'nav)
+
+
+;;
+;; anything
+;;
+
+;(require 'anything-startup)
+
+
+;;
+;; ...
+;;
+
+(cd "~")
