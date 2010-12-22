@@ -22,6 +22,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 
+alias e='emacs -nw'
 alias sc='screen'
 
 if [ -f /usr/bin/cygstart ] ; then
