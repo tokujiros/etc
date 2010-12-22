@@ -1,0 +1,14 @@
+[color]
+	status = auto
+	diff = auto
+	branche = auto
+
+[alias]
+	s = status
+	c = commit
+	co = checkout
+	b = branch
+	r = remote
+
+[core]
+	excludesfile = 
