@@ -1,17 +1,13 @@
+DIR     = File.dirname(__FILE__)
 EXCLUDE = %w[ .+~ \. \.\. \.git \.gitignore ]
-DOTS    = Dir.glob(".*").select{|s| !EXCLUDE.map{|e| s =~ /^#{e}$/}.any?}
+DOTS    = Dir.glob("#{DIR}/.*").select{|s| !EXCLUDE.map{|e| s =~ /^#{DIR}\/#{e}$/}.any?}
 
 
-def link_path (path)
-  "../#{path}"
-end
+exit if Dir.pwd == DIR
 
-
-task :default => DOTS.map{|s| link_path s}
 
 DOTS.each do |path|
-  linkpath = link_path(path)
-  file linkpath => [path] do
-    sh %( ln -s #{path} #{linkpath}  )
-  end
+  cmd = "ln -sf #{path} ."
+  puts cmd
+  `#{cmd}`
 end
