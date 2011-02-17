@@ -12,6 +12,6 @@ task :default => DOTS.map{|s| link_path s}
 DOTS.each do |path|
   linkpath = link_path(path)
   file linkpath => [path] do
-    puts %( ln -s #{path} #{linkpath}  )
+    sh %( ln -s #{path} #{linkpath}  )
   end
 end
