@@ -1,7 +1,7 @@
 escape ^z^z
 startup_message off
 defscrollback 5000
-#shell $SHELL
+shell /bin/bash
 
 bind 1 only
 bind 2 eval split focus other
