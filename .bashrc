@@ -12,7 +12,6 @@ umask 22
 unset TMP
 unset TEMP
 
-export HOME=/home/$USERNAME
 export PS1='[\u@\h \W]\\$ '
 export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
