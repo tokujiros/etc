@@ -36,6 +36,10 @@ shopt -s nocaseglob
 shopt -s histappend
 shopt -s cdspell
 
+function c
+{
+	cd $1 && ls -ll | head -n 20
+}
 
 #echo -n "ssh-agent: "
 #source $HOME/.ssh-agent-info
