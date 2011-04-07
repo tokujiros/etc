@@ -19,7 +19,7 @@ export TMP=/tmp
 export TEMP=/tmp
 export TMPDIR=/tmp
 #export LC_CTYPE=ja_JP.UTF-8
-#export LANG=ja_JP.UTF-8
+77;906;0c#export LANG=ja_JP.UTF-8
 export TZ=JST-9
 #export MAKE_MODE=unix
 #export SHELL=/bin/bash
@@ -38,7 +38,7 @@ shopt -s cdspell
 
 function c
 {
-	cd $1 && ls -ll | head -n 20
+	cd $1 && ls | head -n 20
 }
 
 #echo -n "ssh-agent: "
