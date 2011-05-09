@@ -77,17 +77,11 @@
 ;; development
 ;;
 
-(setq compilation-window-height 20)
+;(setq compilation-window-height 20)
 (setq compile-command "rake")
-(add-hook 'compilation-mode-hook
-					(lambda ()
-						(set-default-coding-system 'sjis)))
-(add-hook 'ruby-mode-hook
-					(lambda ()
-						(setq tag-width 2)
-						(setq indent-tabs-mode t)
-						(setq ruby-indent-level 2)
-						(setq ruby-deep-indent-parent-style nil)))
+;(add-hook 'compilation-mode-hook
+;					(lambda ()
+;						(set-default-coding-system 'sjis)))
 
 
 ;;
@@ -128,7 +122,17 @@
 (setq interpreter-mode-alist (append '(("ruby" . ruby-mode)) interpreter-mode-alist))
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
-(add-hook 'ruby-mode-hook '(lambda () (inf-ruby-keys)))
+(add-hook 'ruby-mode-hook
+					(lambda ()
+						(inf-ruby-keys)
+						(setq tag-width 2)
+						(setq indent-tabs-mode t)
+						(setq ruby-indent-level 2)
+						(setq ruby-deep-indent-parent-style nil)))
+
+;; haml-mode
+(require 'haml-mode)
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
 
 ;;
