@@ -130,9 +130,17 @@
 						(setq ruby-indent-level 2)
 						(setq ruby-deep-indent-parent-style nil)))
 
+;; js2-mode
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+
 ;; haml-mode
 (require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+
+;; coffee-mode
+(require 'coffee-mode)
 
 
 ;;
