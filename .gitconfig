@@ -13,3 +13,6 @@
 
 [core]
 	excludesfile = 
+[user]
+	name = snori
+	email = snori@xord.org
