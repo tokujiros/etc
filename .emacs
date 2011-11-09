@@ -104,6 +104,7 @@
       (tool-bar-mode 0)))
 
 (setq-default tab-width 2)
+(setq-default c-basic-offset 2)
 (set indent-line-function 'indnet-relative-maybe)
 (add-hook 'text-mode-hook
 					(lambda () (local-set-key "\t" 'self-insert-command)))
