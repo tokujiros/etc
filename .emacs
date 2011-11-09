@@ -157,8 +157,8 @@
 ;; nav
 ;;
 
-;(require 'nav)
-;(global-set-key [C-tab] 'nav)
+(require 'nav)
+(global-set-key "\C-xn" 'nav)
 
 
 ;;
