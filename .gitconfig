@@ -2,17 +2,23 @@
 	ui = auto
 
 [alias]
-	s = status -sb
-	d = diff --word-diff=color
+	s  = status -sb
+	d  = diff --word-diff=color
 	dc = diff --cached --word-diff=color
-	l = log --oneline --decorate
-	c = commit -m
+	l  = log --oneline --graph --decorate
+	c  = commit -m
 	co = checkout
-	b = branch
-	r = remote
+	b  = branch
+	r  = remote
+	ss = stash save --keep-index
+	sp = stash pop --index
 
 [core]
 	excludesfile = 
+
 [user]
-	name = snori
-	email = snori@xord.org
+	name = xordog
+	email = xordog@gmail.com
+
+[merge]
+	conflictstyle = diff3
