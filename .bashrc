@@ -13,7 +13,7 @@ unset TMP
 unset TEMP
 
 export PS1='[\u@\h \W]\\$ '
-export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export TMP=/tmp
 export TEMP=/tmp

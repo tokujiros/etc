@@ -20,6 +20,7 @@ alias ...='c ../..'
 alias ....='c ../../..'
 
 alias e='emacs -nw'
+alias g=git
 alias sc='screen'
 
 if [ -f /usr/bin/cygstart ] ; then

@@ -2,16 +2,18 @@
 	ui = auto
 
 [alias]
-	s  = status -sb
-	d  = diff --word-diff=color
-	dc = diff --cached --word-diff=color
-	l  = log --oneline --graph --decorate
-	c  = commit -m
-	co = checkout
-	b  = branch
-	r  = remote
-	ss = stash save --keep-index
-	sp = stash pop --index
+	s     = status -sb
+	d     = diff --word-diff=color
+	diffc = diff --cached
+	dc    = diff --cached #--word-diff=color
+	df    = diff --name-only
+	l     = log --oneline --graph --decorate
+	c     = commit -m
+	co    = checkout
+	b     = branch
+	r     = remote
+	ss    = stash save --keep-index
+	sp    = stash pop --index
 
 [core]
 	excludesfile = 
